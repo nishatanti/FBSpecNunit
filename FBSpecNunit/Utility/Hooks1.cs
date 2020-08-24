@@ -12,14 +12,13 @@ namespace FBSpecNunit.Utility
 {
     [Binding]
     [TestFixture]
-    [Parallelizable]
-        //(ParallelScope.All)]
+    [Parallelizable(ParallelScope.All)]
    //sealed removed
     public class Hooks1 
     {
-       
-        //IWebDriver driver;
 
+        //IWebDriver driver;
+        
         private readonly IObjectContainer _objectcontainer;
 
         private IWebDriver _driver;

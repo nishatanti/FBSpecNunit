@@ -34,7 +34,7 @@ namespace FBSpecNunit.Steps
         [FindsBy(How = How.Id, Using = "txtemailiduser")]
 
         public IWebElement UserIDElement { get; set; }
-        public void userid()
+        public void userId()
         {
             supp.ExplicitWaitElement(10, _driver, UserIDElement);
             UserIDElement.Click();

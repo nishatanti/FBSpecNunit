@@ -14,8 +14,7 @@ namespace FBSpecNunit.PageObject
 {
     [Binding]
     [TestFixture]
-    [Parallelizable]
-        //(ParallelScope.All)]
+    [Parallelizable(ParallelScope.All)]
 
     //sealed
     public class ISW_Hotel_Steps

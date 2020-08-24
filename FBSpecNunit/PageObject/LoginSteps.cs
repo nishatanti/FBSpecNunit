@@ -14,7 +14,7 @@ namespace FBSpecNunit.PageObject
     [Binding]
     [TestFixture]
     [Parallelizable(ParallelScope.All)]
-        ////sealed
+     //sealed
     public  class LoginSteps 
     {
         Support supp = new Support();
@@ -54,7 +54,7 @@ namespace FBSpecNunit.PageObject
             try
             {
                 lrepo = new loginRepo(_driver);
-                lrepo.userid();
+                lrepo.userId();
                 lrepo.password();
 
             }

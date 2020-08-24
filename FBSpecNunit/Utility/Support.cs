@@ -52,5 +52,16 @@ namespace FBSpecNunit.Utility
 
         }
 
+        public void EncodingPassword()
+        {
+            string password = "Welcome@123";
+            var passwordInBytes = Encoding.UTF8.GetBytes(password);
+            string encodedPassword = Convert.ToBase64String(passwordInBytes);
+            Console.WriteLine(encodedPassword);
+            //Console.WriteLine("Encoded password is : " + encodedPassword);
+            //Console.ReadLine();
+
+        }
+
     }
 }
