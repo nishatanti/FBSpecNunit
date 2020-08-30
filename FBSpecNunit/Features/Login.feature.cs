@@ -158,14 +158,14 @@ this.FeatureBackground();
 #line 14
  testRunner.When("Click on Travelagent tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                             "UserName",
                             "Password"});
-                table1.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "FBTEST",
                             "FBTEST123"});
 #line 15
- testRunner.And("Enter Username and Password", ((string)(null)), table1, "And ");
+ testRunner.And("Enter Username and Password", ((string)(null)), table2, "And ");
 #line hidden
 #line 19
  testRunner.And("Click on btob SignIn button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

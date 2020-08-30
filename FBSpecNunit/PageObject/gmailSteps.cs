@@ -30,7 +30,7 @@ namespace FBSpecNunit.PageObject
         {
             gmailr = new GmailRepo(_driver);
             _driver.Navigate().GoToUrl("http://jt-dev.azurewebsites.net/#/SignUp");
-            //_driver.Manage().Window.Maximize();
+            _driver.Manage().Window.Maximize();
 
         }
 

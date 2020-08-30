@@ -15,12 +15,13 @@ namespace FBSpecNunit.Steps
     {
         private IWebDriver _driver;
         Support supp = new Support();
-
+        //constructor -> initializing data members to utilise those in methods
         public GmailRepo(IWebDriver driver)
         {
             this._driver = driver;
             PageFactory.InitElements(driver, this);
         }
+        //declaring data members
         [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div[2]/section/div/div[2]/section/div")]
 
         public IWebElement SelectLanguage { get; set; }
