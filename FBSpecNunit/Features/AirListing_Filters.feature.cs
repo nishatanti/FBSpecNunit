@@ -73,14 +73,46 @@ namespace FBSpecNunit.Features
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 4
+ #line hidden
+#line 5
+ testRunner.Given("User is On HomePage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Source",
+                        "Destination",
+                        "DeptDate",
+                        "ReturnDate",
+                        "Adult",
+                        "Class"});
+            table1.AddRow(new string[] {
+                        "LAX",
+                        "NYC",
+                        "09/20/2020",
+                        "09/25/2020",
+                        "2",
+                        "Business"});
+#line 6
+    testRunner.And("Enter all the details of ISW", ((string)(null)), table1, "And ");
+#line hidden
+#line 10
+    testRunner.And("Click on search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 11
+    testRunner.And("User is navigated to listing page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+        }
+        
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify flight times filter")]
-        public virtual void VerifyFlightTimesFilter()
+        [NUnit.Framework.DescriptionAttribute("Verify flight times Going filter")]
+        public virtual void VerifyFlightTimesGoingFilter()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify flight times filter", null, tagsOfScenario, argumentsOfScenario);
-#line 5
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify flight times Going filter", null, tagsOfScenario, argumentsOfScenario);
+#line 14
   this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -100,37 +132,54 @@ namespace FBSpecNunit.Features
             else
             {
                 this.ScenarioStart();
-#line 6
-    testRunner.Given("User is On HomePage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 4
+ this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Source",
-                            "Destination",
-                            "DeptDate",
-                            "ReturnDate",
-                            "Adult",
-                            "Class"});
-                table1.AddRow(new string[] {
-                            "LAX",
-                            "NYC",
-                            "09/20/2020",
-                            "09/25/2020",
-                            "2",
-                            "Business"});
-#line 7
-    testRunner.And("Enter all the details of ISW", ((string)(null)), table1, "And ");
-#line hidden
-#line 12
-    testRunner.And("Click on search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 13
-    testRunner.And("User is navigated to listing page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 14
+#line 23
     testRunner.When("Click on going slider from left", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 15
-    testRunner.Then("Slider selected time will appear in the contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 24
+    testRunner.Then("Going Slider selected time will appear in the contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Verify flight times Return filter")]
+        public virtual void VerifyFlightTimesReturnFilter()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify flight times Return filter", null, tagsOfScenario, argumentsOfScenario);
+#line 27
+    this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 4
+ this.FeatureBackground();
+#line hidden
+#line 36
+    testRunner.When("Click on return slider from left", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 37
+    testRunner.Then("Return Slider selected time will appear in the contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

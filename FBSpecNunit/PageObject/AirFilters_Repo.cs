@@ -98,6 +98,15 @@ namespace FBSpecNunit.PageObject
             Thread.Sleep(5000);
 	    }
 
+        public void ReturnSlider()
+        {
+            IWebElement slider2 = _driver.FindElement(By.CssSelector("#DivDepartReturn > div > div > div.slider-track > div:nth-child(3)"));
+            Actions move2 = new Actions(_driver);
+            move2.DragAndDropToOffset(slider2,0, -30);
+            move2.Build().Perform();
+            Thread.Sleep(5000);
+        }
+
        
         //public void display_flighttime()
         //{
@@ -123,6 +132,18 @@ namespace FBSpecNunit.PageObject
         {
             supp.ExplicitWaitElement(40, _driver, ShowButton);
             Assert.IsTrue(ShowButton.Displayed);
+        }
+
+        //(//time[@class="airport__time"])[5]
+
+        [FindsBy(How = How.XPath, Using = "(//time[@class='airport__time'])[5]")]
+
+        public IWebElement ShowflightReturntime { get; set; }
+        public void display_flightReturntime()
+        {
+            supp.ExplicitWaitElement(10, _driver, ShowflightReturntime);
+            Assert.IsTrue(ShowflightReturntime.Displayed);
+
         }
 
 

@@ -69,11 +69,30 @@ namespace FBSpecNunit.Steps
             airfilter.GoingSlider();
         }
 
-        [Then(@"Slider selected time will appear in the contract")]
-        public void ThenSliderSelectedTimeWillAppearInTheContract()
+        [Then(@"Going Slider selected time will appear in the contract")]
+        public void ThenGoingSliderSelectedTimeWillAppearInTheContract()
         {
             airfilter = new AirFilters_Repo(_driver);
             airfilter.display_flighttime();
+            _driver.Close();
+            _driver.Quit();
+        }
+
+        [When(@"Click on return slider from left")]
+        public void WhenClickOnReturnSliderFromLeft()
+        {
+            airfilter = new AirFilters_Repo(_driver);
+            airfilter.ReturnSlider();
+        }
+
+        [Then(@"Return Slider selected time will appear in the contract")]
+        public void ThenReturnSliderSelectedTimeWillAppearInTheContract()
+        {
+            airfilter = new AirFilters_Repo(_driver);
+            airfilter.display_flightReturntime();
+            _driver.Close();
+            _driver.Quit();
+
         }
 
     }

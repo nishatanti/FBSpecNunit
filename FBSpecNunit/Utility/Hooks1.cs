@@ -32,21 +32,24 @@ namespace FBSpecNunit.Utility
         [BeforeScenario]
         public void BeforeScenario()
         {
-               
+            Console.WriteLine("LAUNCH URL");
+            ChromeOptions options = new ChromeOptions();
+            options.AddArgument("no-sandbox");
 
-                Console.WriteLine("LAUNCH URL");
-                _driver = new ChromeDriver();
-                _objectcontainer.RegisterInstanceAs<IWebDriver>(_driver);
+            ChromeDriver _driver = new ChromeDriver(ChromeDriverService.CreateDefaultService(), options, TimeSpan.FromMinutes(3));
+            _driver.Manage().Timeouts().PageLoad.Add(System.TimeSpan.FromSeconds(30));
+            //_driver = new ChromeDriver();
+            _objectcontainer.RegisterInstanceAs<IWebDriver>(_driver);
 
-
+          
         }
 
         [AfterScenario]
         public void AfterScenario()
         {
             Console.WriteLine("TEST PASS");
-            _driver.Close();
-            _driver.Quit();
+            //_driver.Close();
+            //_driver.Quit();
         }
         public IWebDriver Driver => _driver;
     }
