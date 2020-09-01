@@ -38,7 +38,7 @@ namespace FBSpecNunit.Utility
 
             ChromeDriver _driver = new ChromeDriver(ChromeDriverService.CreateDefaultService(), options, TimeSpan.FromMinutes(3));
             _driver.Manage().Timeouts().PageLoad.Add(System.TimeSpan.FromSeconds(30));
-            //_driver = new ChromeDriver();
+           
             _objectcontainer.RegisterInstanceAs<IWebDriver>(_driver);
 
           
